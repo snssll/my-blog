@@ -121,21 +121,21 @@ function Newsletter() {
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
+        <span className="ml-3">订阅我的文章</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
+        你可以通过邮件订阅我的文章，我会在有新文章发布时通知你。随时可以取消～
       </p>
       <div className="mt-6 flex">
         <input
           type="email"
-          placeholder="Email address"
+          placeholder="邮箱地址"
           aria-label="Email address"
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
         />
         <Button type="submit" className="ml-4 flex-none">
-          Join
+          订阅
         </Button>
       </div>
     </form>
@@ -147,7 +147,7 @@ function Resume() {
   let resume = [
     {
       company: 'ZJUT - 信息管理与信息系统',
-      title: '二学位',
+      title: 'Second degree',
       logo: logoPlanetaria,
       start: '2022',
       end: {
@@ -157,21 +157,21 @@ function Resume() {
     },
     {
       company: 'ZJUT - 城乡规划学',
-      title: '本科',
+      title: 'Bachelor degree',
       logo: logoAirbnb,
       start: '2017',
       end: '2022',
     },
     {
       company: 'ZPDI - 浙江省城乡规划设计研究院',
-      title: '助理规划师',
+      title: 'Assistant Planner',
       logo: logoFacebook,
       start: '2021',
       end: '2022',
     },
     {
       company: 'ZASDI - 浙江省建筑科学设计研究院',
-      title: '实习生',
+      title: 'Intern',
       logo: logoStarbucks,
       start: '2020',
       end: '2021',
@@ -273,7 +273,7 @@ export default function Home({ articles }) {
           学生 / 无业游民 / 业余摄影爱好者
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            可以叫我 Cooper, 
+            可以叫我 Cooper，目前就读于ZJUT管理学院，曾经做过城市规划，现在是 React 入门选手，有点喜欢机器学习，但未来更想成为一名摄影师或者作家。
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
