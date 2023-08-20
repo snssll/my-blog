@@ -36,11 +36,11 @@ export default function Uses() {
         />
       </Head>
       <SimpleLayout
-        title="Software I use, gadgets I love, and other things I recommend."
-        intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+        title="一些小玩意"
+        intro="鼓捣一些`可能`提升一些生产力的小工具并分享给大家也是我的一大快乐源泉，在此之外也有一些好玩的、好用的或是好看的，又或者是某些奇葩的东西。"
       >
         <div className="space-y-20">
-          <ToolsSection title="Workstation">
+          <ToolsSection title="生产力">
             <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
               I was using an Intel-based 16” MacBook Pro prior to this and the
               difference is night and day. I’ve never heard the fans turn on a

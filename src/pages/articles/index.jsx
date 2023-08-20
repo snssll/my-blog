@@ -35,6 +35,7 @@ function Article({ article }) {
   )
 }
 
+// 文章目录页主函数
 export default function ArticlesIndex({ articles }) {
   return (
     <>

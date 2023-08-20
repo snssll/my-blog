@@ -9,19 +9,20 @@ import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 
+// 定义我做过的项目
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Next.js',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
+      '集成强大的基于 Rust 的 JavaScript 工具，扩展了最新的 React 功能。',
+    link: { href: 'https://nextjs.org', label: 'nextjs.org' },
     logo: logoPlanetaria,
   },
   {
-    name: 'Animaginary',
+    name: 'Rust',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
+      '一种让每个人都能够构建可靠且高效软件的语言。',
+    link: { href: 'https://www.rust-lang.org', label: 'rust-lang.org' },
     logo: logoAnimaginary,
   },
   {
@@ -47,6 +48,7 @@ const projects = [
   },
 ]
 
+// 定义连接图标
 function LinkIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -58,6 +60,7 @@ function LinkIcon(props) {
   )
 }
 
+// 主函数
 export default function Projects() {
   return (
     <>
@@ -65,12 +68,12 @@ export default function Projects() {
         <title>Projects - Terry Cooper</title>
         <meta
           name="description"
-          content="Things I’ve made trying to put my dent in the universe."
+          content="试图在宇宙中留下的痕迹"
         />
       </Head>
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        title="试图在宇宙中留下的痕迹"
+        intro="参与过的项目大大小小有许多，其中值得一提的仅占少数。以下的大部分项目都是开源的，假如你感兴趣可以方便地查阅相关代码；如果你有好的想法，也欢迎提交 pr 参与到项目中来。"
       >
         <ul
           role="list"

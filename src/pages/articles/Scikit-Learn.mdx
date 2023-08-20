@@ -1,0 +1,213 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Terry Cooper',
+  date: '2023-07-20',
+  title: 'Scikit-Learn 和 LLM 的联手',
+  description:
+    'Scikit-learn（简称sklearn）是一个用于机器学习的开源Python库，它提供了丰富的工具和函数，用于构建和应用各种机器学习模型。',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+以前有Pandas和ChaGPT整合，这样可以不了解Pandas的情况下对DataFrame进行操作。
+
+现在又有人开源了Scikit-LLM，它结合了强大的语言模型，如ChatGPT和scikit-learn。但这个并不是让我们自动化scikit-learn，而是将scikit-learn和语言模型进行整合，scikit-learn也可以处理文本数据了。
+
+## Scikit-learn
+
+Scikit-learn（简称sklearn）是一个用于机器学习的开源Python库，它提供了丰富的工具和函数，用于构建和应用各种机器学习模型。作为一个功能强大且易于使用的工具，scikit-learn已经成为机器学习领域中最受欢迎的库之一。
+
+Scikit-learn库提供了包括分类、回归、聚类、降维和模型选择等常见机器学习任务的算法和工具。它支持各种监督学习和无监督学习方法，例如支持向量机（SVM）、随机森林（Random Forests）、逻辑回归（Logistic Regression）、K均值聚类（K-Means Clustering）、主成分分析（PCA）等。这些算法都经过优化和实现，以便在大规模数据集上高效运行。
+
+除了算法和模型外，scikit-learn还提供了数据预处理、特征选择和评估等工具。它具有广泛的数据转换和特征提取功能，可以帮助您处理和准备数据集。此外，scikit-learn还提供了用于模型评估和参数选择的常用指标和技术，例如交叉验证和网格搜索。
+
+Scikit-learn的设计理念之一是提供一致且易于使用的API接口。这使得用户可以轻松地在不同的机器学习任务之间切换和尝试不同的模型。它还具有丰富的文档和示例代码，为用户提供了学习和使用的资源。
+
+除了上述功能之外，scikit-learn还与其他Python库和工具紧密集成，例如NumPy、SciPy和Matplotlib，使得用户可以方便地与这些库进行交互和扩展。
+
+## LLM
+
+大模型LLM（Large Language Model）是指基于深度学习的大规模语言模型。这些模型通过训练大量的文本数据，例如互联网上的海量文本，可以生成具有语义和语法正确性的人类语言。这些模型的训练过程依赖于深度神经网络和强大的计算资源。
+
+大模型LLM的代表性示例是OpenAI的GPT（Generative Pre-trained Transformer）系列，其中包括最新的GPT-3。这些模型具有数十亿个参数，并且在多个语言任务上表现出色，例如文本生成、自动问答、文本分类和机器翻译等。
+
+大模型LLM的训练通常分为两个阶段：预训练和微调。在预训练阶段，模型使用大规模文本数据进行无监督学习，通过预测下一个单词或填充遮罩等任务来学习语言的统计结构和上下文信息。在微调阶段，模型使用特定任务的有监督数据集进行有针对性的训练，以适应该任务的要求。这种两阶段训练的方式使得大模型LLM可以在各种语言任务上展现出强大的通用性。
+
+大模型LLM的优势在于它们可以理解和生成复杂的语言结构，具备较强的语言理解和生成能力。它们可以自动生成连贯的文本、回答自然语言问题，并在某些情况下甚至能够表现出创造性。这使得它们在自然语言处理、智能对话系统、内容生成等领域具有广泛的应用潜力。
+
+在这里给大家分享一篇来自Deephub Imba的文章，如何结合使用scikit和大模型LLM。
+
+## 安装
+
+```python
+pip install scikit-llm
+```
+
+既然要与Open AI的模型整合，就需要他的Key，从Scikit-LLM库中导入SKLLMConfig模块，并添加openAI密钥:
+
+```python
+# importing SKLLMConfig to configure OpenAI API (key and Name)
+ from skllm.config import SKLLMConfig
+
+ # Set your OpenAI API key
+ SKLLMConfig.set_openai_key("<YOUR_KEY>")
+
+ # Set your OpenAI organization (optional)
+ SKLLMConfig.set_openai_org("<YOUR_ORGANIZATION>")
+```
+
+## ZeroShotGPTClassifier
+
+通过整合ChatGPT不需要专门的训练就可以对文本进行分类。ZeroShotGPTClassifier，就像任何其他scikit-learn分类器一样，使用非常简单。
+
+```python 
+# importing zeroshotgptclassifier module and classification dataset
+ from skllm import ZeroShotGPTClassifier
+ from skllm.datasets import get_classification_dataset
+
+ # get classification dataset from sklearn
+ X, y = get_classification_dataset()
+
+ # defining the model
+ clf = ZeroShotGPTClassifier(openai_model="gpt-3.5-turbo")
+
+ # fitting the data
+ clf.fit(X, y)
+
+ # predicting the data
+ labels = clf.predict(X)
+```
+
+Scikit-LLM在结果上经过了特殊处理，确保响应只包含一个有效的标签。如果响应缺少标签，它还可以进行填充，根据它在训练数据中出现的频率为你选择一个标签。
+
+对于我们自己的带标签的数据，只需要提供候选标签的列表，代码是这个样子的：
+
+```python
+ # importing zeroshotgptclassifier module and classification dataset
+ from skllm import ZeroShotGPTClassifier
+ from skllm.datasets import get_classification_dataset
+
+ # get classification dataset from sklearn for prediction only
+
+ X, _ = get_classification_dataset()
+
+ # defining the model
+ clf = ZeroShotGPTClassifier()
+
+ # Since no training so passing the labels only for prediction
+ clf.fit(None, ['positive', 'negative', 'neutral'])
+
+ # predicting the labels
+ labels = clf.predict(X)
+```
+## MultiLabelZeroShotGPTClassifier
+
+多标签也类似
+
+```python
+ # importing Multi-Label zeroshot module and classification dataset
+ from skllm import MultiLabelZeroShotGPTClassifier
+ from skllm.datasets import get_multilabel_classification_dataset
+
+ # get classification dataset from sklearn
+ X, y = get_multilabel_classification_dataset()
+
+ # defining the model
+ clf = MultiLabelZeroShotGPTClassifier(max_labels=3)
+
+ # fitting the model
+ clf.fit(X, y)
+
+ # making predictions
+ labels = clf.predict(X)
+```
+
+创建MultiLabelZeroShotGPTClassifier类的实例时，指定要分配给每个样本的最大标签数量（这里:max_labels=3）
+
+数据没有没有标签怎么办？可以通过提供候选标签列表来训练没有标记数据的分类器。y的类型应该是List[List[str]]。下面是一个没有标记数据的训练示例:
+
+```python
+ # getting classification dataset for prediction only
+ X, _ = get_multilabel_classification_dataset()
+
+ # Defining all the labels that needs to predicted
+ candidate_labels = [
+     "Quality",
+     "Price",
+     "Delivery",
+     "Service",
+     "Product Variety"
+ ]
+
+ # creating the model
+ clf = MultiLabelZeroShotGPTClassifier(max_labels=3)
+
+ # fitting the labels only
+ clf.fit(None, [candidate_labels])
+
+ # predicting the data
+ labels = clf.predict(X)
+```
+
+## 文本向量化
+
+文本向量化是将文本转换为数字的过程，Scikit-LLM中的GPTVectorizer模块，可以将一段文本(无论文本有多长)转换为固定大小的一组向量。
+
+```python
+ # Importing the necessary modules and classes
+ from sklearn.pipeline import Pipeline
+ from sklearn.preprocessing import LabelEncoder
+ from xgboost import XGBClassifier
+
+ # Creating an instance of LabelEncoder class
+ le = LabelEncoder()
+
+ # Encoding the training labels 'y_train' using LabelEncoder
+ y_train_encoded = le.fit_transform(y_train)
+
+ # Encoding the test labels 'y_test' using LabelEncoder
+ y_test_encoded = le.transform(y_test)
+
+ # Defining the steps of the pipeline as a list of tuples
+ steps = [('GPT', GPTVectorizer()), ('Clf', XGBClassifier())]
+
+ # Creating a pipeline with the defined steps
+ clf = Pipeline(steps)
+
+ # Fitting the pipeline on the training data 'X_train' and the encoded training labels 'y_train_encoded'
+ clf.fit(X_train, y_train_encoded)
+
+ # Predicting the labels for the test data 'X_test' using the trained pipeline
+ yh = clf.predict(X_test)
+```
+
+## 文本摘要
+
+GPT非常擅长总结文本。在Scikit-LLM中有一个叫GPTSummarizer的模块。
+
+```python
+# Importing the GPTSummarizer class from the skllm.preprocessing module
+ from skllm.preprocessing import GPTSummarizer
+
+ # Importing the get_summarization_dataset function
+ from skllm.datasets import get_summarization_dataset
+
+ # Calling the get_summarization_dataset function
+ X = get_summarization_dataset()
+
+ # Creating an instance of the GPTSummarizer
+ s = GPTSummarizer(openai_model='gpt-3.5-turbo', max_words=15)
+
+ # Applying the fit_transform method of the GPTSummarizer instance to the input data 'X'.
+ # It fits the model to the data and generates the summaries, which are assigned to the variable 'summaries'
+ summaries = s.fit_transform(X)
+```
+
+需要注意的是，max_words超参数是对生成摘要中单词数量的灵活限制。虽然max_words为摘要长度设置了一个粗略的目标，但摘要器可能偶尔会根据输入文本的上下文和内容生成略长的摘要。
+
+## 总结
+
+ChaGPT的火爆使得泛化模型有了更多的进步，这种进步也给我们日常的使用带来了巨大的变革，Scikit-LLM就将LLM整合进了Scikit的工作流，如果你有兴趣，这里是源码：
+
+https://github.com/iryna-kondr/scikit-llm

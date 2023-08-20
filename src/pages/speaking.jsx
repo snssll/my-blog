@@ -32,12 +32,12 @@ export default function Speaking() {
         <title>Speaking - Terry Cooper</title>
         <meta
           name="description"
-          content="I’ve spoken at events all around the world and been interviewed for many podcasts."
+          content="文字之外，我也有在许多地方进行知识的交流和分享"
         />
       </Head>
       <SimpleLayout
-        title="I’ve spoken at events all around the world and been interviewed for many podcasts."
-        intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
+        title="文字之外"
+        intro="除了文字我更喜欢的分享方式其实是面对面的交流，例如演讲、线下活动、博客等等，这些方式是交互性质的，相比于文字有着更大的带宽和沟通效果。"
       >
         <div className="space-y-20">
           <SpeakingSection title="Conferences">
