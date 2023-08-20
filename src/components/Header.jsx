@@ -8,6 +8,7 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.jpg'
 
+// 定义目录关闭
 function CloseIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -23,6 +24,7 @@ function CloseIcon(props) {
   )
 }
 
+// 定义展开图标
 function ChevronDownIcon(props) {
   return (
     <svg viewBox="0 0 8 6" aria-hidden="true" {...props}>
@@ -37,6 +39,7 @@ function ChevronDownIcon(props) {
   )
 }
 
+// 定义日间模式图标
 function SunIcon(props) {
   return (
     <svg
@@ -56,6 +59,7 @@ function SunIcon(props) {
   )
 }
 
+// 定义夜间模式图标
 function MoonIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -69,6 +73,7 @@ function MoonIcon(props) {
   )
 }
 
+// 定义移动端导航栏项目
 function MobileNavItem({ href, children }) {
   return (
     <li>
@@ -79,11 +84,12 @@ function MobileNavItem({ href, children }) {
   )
 }
 
+// 定义移动端导航栏
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
       <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
-        Menu
+        目录
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
       </Popover.Button>
       <Transition.Root>
@@ -116,7 +122,7 @@ function MobileNavigation(props) {
                 <CloseIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
               </Popover.Button>
               <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                Navigation
+                目录
               </h2>
             </div>
             <nav className="mt-6">
@@ -135,6 +141,7 @@ function MobileNavigation(props) {
   )
 }
 
+// 定义桌面端导航栏项目
 function NavItem({ href, children }) {
   let isActive = useRouter().pathname === href
 
@@ -158,6 +165,7 @@ function NavItem({ href, children }) {
   )
 }
 
+// 定义桌面端导航栏
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
@@ -172,6 +180,7 @@ function DesktopNavigation(props) {
   )
 }
 
+// 定义模式切换按钮
 function ModeToggle() {
   function disableTransitionsTemporarily() {
     document.documentElement.classList.add('[&_*]:!transition-none')
@@ -207,12 +216,14 @@ function ModeToggle() {
   )
 }
 
+// 定义坐标夹子
 function clamp(number, a, b) {
   let min = Math.min(a, b)
   let max = Math.max(a, b)
   return Math.min(Math.max(number, min), max)
 }
 
+// 头像容器
 function AvatarContainer({ className, ...props }) {
   return (
     <div
@@ -225,6 +236,7 @@ function AvatarContainer({ className, ...props }) {
   )
 }
 
+// 头像
 function Avatar({ large = false, className, ...props }) {
   return (
     <Link
@@ -247,6 +259,7 @@ function Avatar({ large = false, className, ...props }) {
   )
 }
 
+// 主函数
 export function Header() {
   let isHomePage = useRouter().pathname === '/'
 
