@@ -98,7 +98,7 @@ function Article({ article }) {
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      <Card.Cta>阅读全文</Card.Cta>
     </Card>
   )
 }
@@ -264,7 +264,7 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="可以叫我 Cooper，目前就读于ZJUT管理学院，曾经做过 Urban Planning，现在是 React 入门选手，有点喜欢 Machine Learning，但未来更想成为一名摄影师或者作家。"
         />
       </Head>
       <Container className="mt-9">
@@ -273,7 +273,7 @@ export default function Home({ articles }) {
           学生 / 无业游民 / 业余摄影爱好者
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            可以叫我 Cooper，目前就读于ZJUT管理学院，曾经做过城市规划，现在是 React 入门选手，有点喜欢机器学习，但未来更想成为一名摄影师或者作家。
+            可以叫我 Cooper，目前就读于ZJUT管理学院，曾经做过 Urban Planning，现在是 React 入门选手，有点喜欢 Machine Learning，但未来更想成为一名摄影师或者作家。
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

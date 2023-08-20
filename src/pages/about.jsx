@@ -44,7 +44,7 @@ export default function About() {
         <title>About - Terry Cooper</title>
         <meta
           name="description"
-          content="I’m Terry Cooper. I live in New York City, where I design the future."
+          content="I'am Terry Cooper, 坐标西湖, 沉迷 React, 梦想 AI 解放全人类"
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -60,52 +60,50 @@ export default function About() {
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Terry Cooper. I live in New York City, where I design the
-              future.
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
+              I'am TCooper，来自西湖，<br />沉迷于 React 和 Rust，<br />梦想有一天 AI 可以解放全人类
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+                我喜欢探索未知，讨厌机械性劳动。从我还是八岁的时候，我就开始对身边的事物产生强烈的好奇心。
               </p>
               <p>
-                The only thing I loved more than computers as a kid was space.
-                When I was 8, I climbed the 40-foot oak tree at the back of our
-                yard while wearing my older sister’s motorcycle helmet, counted
-                down from three, and jumped — hoping the tree was tall enough
-                that with just a bit of momentum I’d be able to get to orbit.
+                记得那时，家里有一只古老的闹钟，那种有齿轮和摆锤的机械式闹钟。
+                每次它的指针滴答滴答地转动，我都会被吸引，想要知道其中的奥秘。
+                于是有一天，当家里的大人不在家时，我小心翼翼地用螺丝刀将它拆开，
+                试图解开它的秘密。
               </p>
               <p>
-                I spent the next few summers indoors working on a rocket design,
-                while I recovered from the multiple surgeries it took to fix my
-                badly broken legs. It took nine iterations, but when I was 15 I
-                sent my dad’s Blackberry into orbit and was able to transmit a
-                photo back down to our family computer from space.
+                当我看到那些精巧的齿轮、弹簧和摆锤时，我几乎忘了时间。
+                虽然我不能完全理解其工作原理，但是能够亲手触摸到那些部件，让我感到无比兴奋。
+                然而，当我试图将其重新组装时，我发现这比我预想的要复杂得多。
+                最后，那只闹钟再也没有响起过。
               </p>
               <p>
-                Today, I’m the founder of Planetaria, where we’re working on
-                civilian space suits and manned shuttle kits you can assemble at
-                home so that the next generation of kids really <em>can</em>{' '}
-                make it to orbit — from the comfort of their own backyards.
+                我以为我会因为这件事受到家长的责骂，但当我坦白告诉父母时，
+                他们并没有生气，反而笑着说：“你的好奇心很值得鼓励，
+                但下次在拆东西之前，先确保你知道怎么组装回去。”
+              </p>
+              <p>
+                随着年岁的增长，我发现机械性的劳动并不适合我。
+                无论是学校的作业还是家里的日常琐事，一成不变的重复总让我感到厌烦。
+                我需要的是刺激和新鲜感，我想要探索更多的未知世界。
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
               <SocialLink href="#" icon={TwitterIcon}>
-                Follow on Twitter
+                在 Twitter 上关注我
               </SocialLink>
               <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-                Follow on Instagram
+                在 Instagram 上关注我
               </SocialLink>
               <SocialLink href="#" icon={GitHubIcon} className="mt-4">
-                Follow on GitHub
+                在 GitHub 上关注我
               </SocialLink>
               <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-                Follow on LinkedIn
+                在 Weibo 上关注我
               </SocialLink>
               <SocialLink
                 href="mailto:chulingyun@zjut.edu.cn"
