@@ -40,7 +40,7 @@ export default function ArticlesIndex({ articles }) {
   return (
     <>
       <Head>
-        <title>杂谈 - Terry Cooper</title>
+        <title>胡诌 - Terry Cooper</title>
         <meta
           name="description"
           content="这里会有我关于宇宙、生活、哲学、科技、技术的一些思考，主要目的是为了记录，也为了将来有一天可以用它们训练一个人工智能复制体。"

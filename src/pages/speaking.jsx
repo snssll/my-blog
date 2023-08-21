@@ -29,7 +29,7 @@ export default function Speaking() {
   return (
     <>
       <Head>
-        <title>胡诌 - Terry Cooper</title>
+        <title>杂谈 - Terry Cooper</title>
         <meta
           name="description"
           content="文字之外，我也有在许多地方进行知识的交流和分享"
