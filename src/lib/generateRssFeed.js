@@ -5,6 +5,7 @@ import { mkdir, writeFile } from 'fs/promises'
 
 import { getAllArticles } from './getAllArticles'
 
+// 支持 RSS 的文章列表
 export async function generateRssFeed() {
   let articles = await getAllArticles()
   let siteUrl = process.env.NEXT_PUBLIC_SITE_URL

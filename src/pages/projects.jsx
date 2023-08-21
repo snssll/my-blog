@@ -65,7 +65,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - Terry Cooper</title>
+        <title>瞎搞 - Terry Cooper</title>
         <meta
           name="description"
           content="试图在宇宙中留下的痕迹"

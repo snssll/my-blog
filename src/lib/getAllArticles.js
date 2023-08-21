@@ -12,6 +12,7 @@ async function importArticle(articleFilename) {
   }
 }
 
+// 获取所有文章
 export async function getAllArticles() {
   let articleFilenames = await glob(['*.mdx', '*/index.mdx'], {
     cwd: path.join(process.cwd(), 'src/pages/articles'),

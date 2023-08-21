@@ -41,7 +41,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Terry Cooper</title>
+        <title>关于 - Terry Cooper</title>
         <meta
           name="description"
           content="I'am Terry Cooper, 坐标西湖, 沉迷 React, 梦想 AI 解放全人类"

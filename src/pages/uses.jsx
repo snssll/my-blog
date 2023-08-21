@@ -29,7 +29,7 @@ export default function Uses() {
   return (
     <>
       <Head>
-        <title>Uses - Terry Cooper</title>
+        <title>安利 - Terry Cooper</title>
         <meta
           name="description"
           content="Software I use, gadgets I love, and other things I recommend."
