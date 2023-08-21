@@ -9,12 +9,12 @@ export default function ThankYou() {
         <title>You’re subscribed - Terry Cooper</title>
         <meta
           name="description"
-          content="Thanks for subscribing to my newsletter."
+          content="感谢你的订阅～"
         />
       </Head>
       <SimpleLayout
-        title="Thanks for subscribing."
-        intro="I’ll send you an email any time I publish a new blog post, release a new project, or have anything interesting to share that I think you’d want to hear about. You can unsubscribe at any time, no hard feelings."
+        title="感谢你的订阅～"
+        intro="每次我有新的文章发布时，你都会收到一封邮件。随时可以取消，不要有任何压力。"
       />
     </>
   )

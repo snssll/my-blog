@@ -37,79 +37,36 @@ export default function Uses() {
       </Head>
       <SimpleLayout
         title="一些小玩意"
-        intro="鼓捣一些`可能`提升一些生产力的小工具并分享给大家也是我的一大快乐源泉，在此之外也有一些好玩的、好用的或是好看的，又或者是某些奇葩的东西。"
+        intro="鼓捣一些`可能`提升生产力的小玩意儿并分享给大家是我的一大快乐源泉，此外还有一些我个人觉得非常有意思的东西。"
       >
         <div className="space-y-20">
-          <ToolsSection title="生产力">
-            <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-              I was using an Intel-based 16” MacBook Pro prior to this and the
-              difference is night and day. I’ve never heard the fans turn on a
-              single time, even under the incredibly heavy loads I put it
-              through with our various launch simulations.
+          <ToolsSection title="实物">
+            <Tool title="14” MacBook Pro, M1 Max, 64GB RAM (2021)">
+              自从我转向 Mac 就再也没有听到过风扇转动的声音，一度以为他是没有风扇的，直到我通过软件手段打开它才确认了我的笔记本是有风扇的并且确实可以转。
             </Tool>
-            <Tool title="Apple Pro Display XDR (Standard Glass)">
-              The only display on the market if you want something HiDPI and
-              bigger than 27”. When you’re working at planetary scale, every
-              pixel you can get counts.
+            <Tool title="Nintendo Switch Lite (2019)">
+              虽然 switch 的芯片和屏幕是电子垃圾，但是它的游戏体验是无可替代的。Lite 体积小，长时间握持也不觉得累，塞尔达和斯普拉顿可以是我的最爱了。
             </Tool>
-            <Tool title="IBM Model M SSK Industrial Keyboard">
-              They don’t make keyboards the way they used to. I buy these any
-              time I see them go up for sale and keep them in storage in case I
-              need parts or need to retire my main.
-            </Tool>
-            <Tool title="Apple Magic Trackpad">
-              Something about all the gestures makes me feel like a wizard with
-              special powers. I really like feeling like a wizard with special
-              powers.
-            </Tool>
-            <Tool title="Herman Miller Aeron Chair">
-              If I’m going to slouch in the worst ergonomic position imaginable
-              all day, I might as well do it in an expensive chair.
+            <Tool title="PROGRESS HEALTH 双背椅">
+              椅子是我捡来的，但是舒适度是真的，双背的支撑简直可以坐一天也不会觉得累。有一天靠背固定有点坏了，我看了看牌子去淘宝上搜发现价格也挺香，等这把彻底报废了我就去买把新的。
             </Tool>
           </ToolsSection>
-          <ToolsSection title="Development tools">
-            <Tool title="Sublime Text 4">
-              I don’t care if it’s missing all of the fancy IDE features
-              everyone else relies on, Sublime Text is still the best text
-              editor ever made.
+          <ToolsSection title="开发工具">
+            <Tool title="VIM (R.I.P Bram Moolenaar)">
+              真的是年少不知 VIM 好，我刚接触 IDE 的时候用的就是 VsCode，当时特别鄙视 VIM，（都什么年代了还用 VIM） 现在的情况是我把键盘都改成了 VIM 模式。
             </Tool>
-            <Tool title="iTerm2">
-              I’m honestly not even sure what features I get with this that
-              aren’t just part of the macOS Terminal but it’s what I use.
-            </Tool>
-            <Tool title="TablePlus">
-              Great software for working with databases. Has saved me from
-              building about a thousand admin interfaces for my various projects
-              over the years.
+            <Tool title="OrbStack">
+              是一个 Mac 端 Docker 管理的替代工具，同时具有虚拟机功能。据说开发者是一个还在上学的的朋友，Docker 官方的工具无论是体验、性能还有空间占用上完全没有优势。OrbStack 是最好的 Docker 工具！
             </Tool>
           </ToolsSection>
-          <ToolsSection title="Design">
+          <ToolsSection title="设计工具">
             <Tool title="Figma">
-              We started using Figma as just a design tool but now it’s become
-              our virtual whiteboard for the entire company. Never would have
-              expected the collaboration features to be the real hook.
+              我最初只是将 Figma 当做一个设计工具，现在已经完全成为了我的设计白板，我会专门有一个文档由于记录设计思路，据说它的协作表现也非常优秀。
             </Tool>
           </ToolsSection>
-          <ToolsSection title="Productivity">
-            <Tool title="Alfred">
-              It’s not the newest kid on the block but it’s still the fastest.
-              The Sublime Text of the application launcher world.
-            </Tool>
-            <Tool title="Reflect">
-              Using a daily notes system instead of trying to keep things
-              organized by topics has been super powerful for me. And with
-              Reflect, it’s still easy for me to keep all of that stuff
-              discoverable by topic even though all of my writing happens in the
-              daily note.
-            </Tool>
-            <Tool title="SavvyCal">
-              Great tool for scheduling meetings while protecting my calendar
-              and making sure I still have lots of time for deep work during the
-              week.
-            </Tool>
-            <Tool title="Focus">
-              Simple tool for blocking distracting websites when I need to just
-              do the work and get some momentum going.
+          <ToolsSection title="生产力工具">
+            <Tool title="google Colab">
+              一个免费的 Jupyter 笔记本环境，可以免费使用 GPU 和 TPU，我用它来训练机器学习模型，也可以用来写一些小程序。免除了配置环境和电脑发热的痛苦。
             </Tool>
           </ToolsSection>
         </div>

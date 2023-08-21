@@ -12,6 +12,13 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 // 定义我做过的项目
 const projects = [
   {
+    name: 'My Blog',
+    description:
+      '基于 Next.js 的个人博客，也就是你现在看到的这个网站。欢迎 fork！',
+    link: { href: 'https://github.com/snssll/my-blog', label: 'github.com' },
+    logo: logoHelioStream,
+  },
+  {
     name: 'Next.js',
     description:
       '集成强大的基于 Rust 的 JavaScript 工具，扩展了最新的 React 功能。',
@@ -26,24 +33,17 @@ const projects = [
     logo: logoAnimaginary,
   },
   {
-    name: 'HelioStream',
+    name: 'Quantumult X',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
+      'Quantumult X 是一个强大的网络工具，适用于需要自定义代理的网页开发者和用户。',
+    link: { href: 'https://apps.apple.com/us/app/quantumult-x/id1443988620', label: 'apple.com' },
     logo: logoCosmos,
   },
   {
-    name: 'OpenShuttle',
+    name: 'Auto-GPT',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
+      '一个试验性的开源尝试，使GPT-4完全自主。',
+    link: { href: 'https://github.com/Significant-Gravitas/Auto-GPT', label: 'github.com' },
     logo: logoOpenShuttle,
   },
 ]
