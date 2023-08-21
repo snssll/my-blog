@@ -6,8 +6,8 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
+  WeiboIcon,
+  WeChatIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
@@ -96,14 +96,14 @@ export default function About() {
               <SocialLink href="#" icon={TwitterIcon}>
                 在 Twitter 上关注我
               </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-                在 Instagram 上关注我
+              <SocialLink href="#" icon={WeiboIcon} className="mt-4">
+                在 Weibo 上关注我
+              </SocialLink>
+              <SocialLink href="#" icon={WeChatIcon} className="mt-4">
+                在 Wechat 上关注我
               </SocialLink>
               <SocialLink href="#" icon={GitHubIcon} className="mt-4">
                 在 GitHub 上关注我
-              </SocialLink>
-              <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-                在 Weibo 上关注我
               </SocialLink>
               <SocialLink
                 href="mailto:chulingyun@zjut.edu.cn"

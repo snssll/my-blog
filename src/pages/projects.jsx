@@ -3,11 +3,11 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoRust from '@/images/logos/rust.svg'
+import logoNextjs from '@/images/logos/nextjs.ico'
+import logoQuantumultX from '@/images/logos/quantumult-x.png'
+import logoAutoGpt from '@/images/logos/auto-gpt.svg'
 
 // 定义我做过的项目
 const projects = [
@@ -23,28 +23,28 @@ const projects = [
     description:
       '集成强大的基于 Rust 的 JavaScript 工具，扩展了最新的 React 功能。',
     link: { href: 'https://nextjs.org', label: 'nextjs.org' },
-    logo: logoPlanetaria,
+    logo: logoNextjs,
   },
   {
     name: 'Rust',
     description:
       '一种让每个人都能够构建可靠且高效软件的语言。',
     link: { href: 'https://www.rust-lang.org', label: 'rust-lang.org' },
-    logo: logoAnimaginary,
+    logo: logoRust,
   },
   {
     name: 'Quantumult X',
     description:
       'Quantumult X 是一个强大的网络工具，适用于需要自定义代理的网页开发者和用户。',
     link: { href: 'https://apps.apple.com/us/app/quantumult-x/id1443988620', label: 'apple.com' },
-    logo: logoCosmos,
+    logo: logoQuantumultX,
   },
   {
     name: 'Auto-GPT',
     description:
       '一个试验性的开源尝试，使GPT-4完全自主。',
     link: { href: 'https://github.com/Significant-Gravitas/Auto-GPT', label: 'github.com' },
-    logo: logoOpenShuttle,
+    logo: logoAutoGpt,
   },
 ]
 

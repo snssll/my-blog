@@ -8,14 +8,14 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
+  WeChatIcon,
+  WeiboIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoZJUTDesign from '@/images/logos/zjutdesign.png'
+import logoZJUTAmba from '@/images/logos/zjutamba.png'
+import logoZPDI from '@/images/logos/zpdi.png'
+import logoZASDI from '@/images/logos/zasdi.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -148,7 +148,7 @@ function Resume() {
     {
       company: 'ZJUT - 信息管理与信息系统',
       title: 'Second degree',
-      logo: logoPlanetaria,
+      logo: logoZJUTAmba,
       start: '2022',
       end: {
         label: '至今',
@@ -158,21 +158,21 @@ function Resume() {
     {
       company: 'ZJUT - 城乡规划学',
       title: 'Bachelor degree',
-      logo: logoAirbnb,
+      logo: logoZJUTDesign,
       start: '2017',
       end: '2022',
     },
     {
       company: 'ZPDI - 浙江省城乡规划设计研究院',
       title: 'Assistant Planner',
-      logo: logoFacebook,
+      logo: logoZPDI,
       start: '2021',
       end: '2022',
     },
     {
       company: 'ZASDI - 浙江省建筑科学设计研究院',
       title: 'Intern',
-      logo: logoStarbucks,
+      logo: logoZASDI,
       start: '2020',
       end: '2021',
     },
@@ -218,8 +218,8 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="../src/pdf/Resume.pdf" variant="secondary" className="group mt-6 w-full">
-        获取简历
+      <Button href="Resume.pdf" variant="secondary" className="group mt-6 w-full">
+        获取履历
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
@@ -278,23 +278,23 @@ export default function Home({ articles }) {
           <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://twitter.com"
-              aria-label="Follow on Twitter"
+              aria-label="Follow on 推特"
               icon={TwitterIcon}
             />
             <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
+              href="https://weibo.com"
+              aria-label="Follow on 微博"
+              icon={WeiboIcon}
+            />
+            <SocialLink
+              href="https://wechat.com"
+              aria-label="Follow on 微信公众号"
+              icon={WeChatIcon}
             />
             <SocialLink
               href="https://github.com"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
             />
           </div>
         </div>
