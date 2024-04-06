@@ -1,2 +1,2 @@
 # my-blog
-个人 Blog，使用 React、NextJS、TaiwindCSS 构建，作为 React 学习的练习项目
+Personal Blog, built using React, NextJS, TailwindCSS, as a practice project for learning React
